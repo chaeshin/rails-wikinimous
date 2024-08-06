@@ -1,0 +1,16 @@
+<div class="container mt-4">
+  <div class='d-flex pb-2 border-bottom'>
+    <h1><%= @article.title %></h1>
+
+    <%= link_to  edit_article_path(@article), class: 'btn btn-link' do %>
+      <i class="fa-solid fa-pencil"></i>
+    <% end %>
+
+    <a href="" data-turbo-method='delete'></a>
+    <%= link_to article_path(@article), class: 'btn btn-link', data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+      <i class="fa-regular fa-trash-can"></i>
+    <% end %>
+
+  </div>
+  <p class='mt-4'><%= @article.content %></p>
+</div>

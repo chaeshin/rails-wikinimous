@@ -1,0 +1,10 @@
+<div class='row mt-4'>
+  <div class='col'></div>
+  <div class='col-6' >
+    <% @articles.each do |article| %>
+      <h1 class='text-left'><%= link_to article.title, article_path(article), class: 'text-decoration-none' %></h1>
+      <p><%= article.content.truncate(50) %></p>
+    <% end %>
+  </div>
+  <div class='col'></div>
+</div>
